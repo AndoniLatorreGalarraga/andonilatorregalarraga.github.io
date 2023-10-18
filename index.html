@@ -28,6 +28,7 @@
     <script src="assets/html5shiv/html5shiv.js"></script>
     <script src="assets/respond/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
     <body id="top">
 
@@ -97,6 +98,15 @@
           </div>
         </section>
 
+        <div class="spacer-cta text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" class="outline-btn" onclick="downloadCV()">Descarga mi CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -201,23 +211,6 @@
 		<!-- ==========================
         ABOUT SECTION END
         =========================== -->	
-
-		
-		<!-- ==========================
-        CUSTOM SPACER
-        =========================== -->
-		<!-- <div class="spacer-cta text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <a href="index.html#contact" class="outline-btn">hire john doe</a>
-              </div>
-            </div>
-          </div>
-        </div> -->
-		<!-- ==========================
-        CUSTOM SPACER END
-        =========================== -->
 		
 		
 	
@@ -236,10 +229,10 @@
               </div>
             </div>
             <div class="row contact-details">
-			  <!-- Adress Box -->
+			  <!-- LinkedIn Box -->
               <div class="col-md-4">
                 <div class="dark-box box-hover">
-                  <h2><i class="fa fa-map-marker"></i><span>LinkedIn</span></h2>
+                  <h2><i class="fa fa-linkedin"></i><span>LinkedIn</span></h2>
                   <p><a href="https://www.linkedin.com/in/andoni-latorre-galarraga-276409296" target="_blank">Visita mi perfil</a>
                   </p>
                 </div>
@@ -293,47 +286,18 @@
 	<!-- Theme JavaScript Core -->
 	<script src="js/main.js"></script>
 	<script src="js/script.js"></script>
-
-	<!-- GOOGLE MAPS DATA -->
-    <script type="text/javascript">
-    // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-    
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 15,
-                
-                scrollwheel: false,
-
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(40.68961985411178, -74.01618003845215), // New York 
-
-                // How you would like to style the map. 
-                // This is where you would paste any style found on Snazzy Maps.
-                styles: [	{		featureType:'water',		stylers:[{color:'#F2F2F2'},{visibility:'on'}]	},{		featureType:'landscape',		stylers:[{color:'#FFFFFF'}]	},{		featureType:'road',		stylers:[{saturation:-100},{lightness:45}]	},{		featureType:'road.highway',		stylers:[{visibility:'simplified'}]	},{		featureType:'road.arterial',		elementType:'labels.icon',		stylers:[{visibility:'off'}]	},{		featureType:'administrative',		elementType:'labels.text.fill',		stylers:[{color:'#ADADAD'}]	},{		featureType:'transit',		stylers:[{visibility:'off'}]	},{		featureType:'poi',		stylers:[{visibility:'off'}]	}]
-            };
-
-            // Get the HTML DOM element that will contain your map 
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('googlemaps');
-
-            // Create the Google Map using out element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-        }
-	
+    <script>
+    function downloadCV() {
+        var pdfURL = 'CV Andoni Latorre Galarraga.pdf';
+        var link = document.createElement('a');
+        link.download = 'CV Andoni Latorre Galarraga.pdf';
+        link.href = pdfURL;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
     </script>
 	
-	<!-- TEXT ROTATOR SETTINGS -->
-    <script type="text/javascript">
-    $(".rotate").textrotator({
-      animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-      separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-      speed: 2000 // How many milliseconds until the next word show.
-    });
-    </script>
 	
     </body>
 </html>

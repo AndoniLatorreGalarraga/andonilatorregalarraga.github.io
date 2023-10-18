@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file (if any) -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Portfolio</title>
 </head>
-
 <body>
     <header>
         <h1>Your Name</h1>
-        <p>Web Developer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="contacto.html">Contact</a></li>
-        </ul>
-    </nav>
-
+   
     <section id="about">
         <h2>About Me</h2>
         <p>Write a brief introduction about yourself here.</p>
@@ -29,13 +25,11 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <!-- List your projects with descriptions and links -->
-        <div class="project">
+        <article>
             <h3>Project Name</h3>
             <p>Description of the project goes here.</p>
-            <a href="project_link">View Project</a>
-        </div>
-        <!-- Add more projects as needed -->
+            <a href="#" class="btn">View Project</a>
+        </article>
     </section>
 
     <section id="contact">
@@ -44,11 +38,70 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 Your Name</p>
+        <p>© 2023 Your Name</p>
     </footer>
-
-    <!-- Add any JavaScript scripts here (if needed) -->
-
 </body>
-
 </html>
+
+/* Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f6f6f6;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+section {
+    margin: 50px 0;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+}
